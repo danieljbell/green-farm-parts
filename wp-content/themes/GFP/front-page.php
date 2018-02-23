@@ -1,8 +1,10 @@
 <?php get_header(); ?>
 
 <section class="hero">
-    <h1>If it's green, we've got it...</h1>
-    <p><a href="#0" class="btn-outline--white">Show Weekly Deals</a></p>
+    <div class="site-width">
+        <h1>If it's green, we've got it...</h1>
+        <p><a href="#0" class="btn-outline--white">Show Weekly Deals</a></p>
+    </div>
 </section>
 
 <section class="pad-y--most">
