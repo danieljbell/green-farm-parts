@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Green Farm Parts</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
-    <link rel="stylesheet" href="/v/vspfiles/templates/gfp-test/css/style.css">
+    <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
     
@@ -25,7 +25,7 @@
         <div class="site-width">
             <nav>
                 <ul class="site-header-list">
-                    <li class="site-header-logo-container"><a href="/"><img src="/v/vspfiles/templates/gfp-test/img/GFP-logo.png" alt=""></a></li>
+                    <li class="site-header-logo-container"><a href="/"><img src="/wp-content/themes/GFP/dist/img/GFP-logo.png" alt=""></a></li>
                     <li><a href="#0">Gifts</a></li>
                     <li><a href="#0">Deals &amp; Promotions</a></li>
                     <li><a href="#0">My Account</a></li>
