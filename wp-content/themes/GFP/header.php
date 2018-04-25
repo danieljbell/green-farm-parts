@@ -12,29 +12,58 @@
     <section class="eyebrow">
         <div class="site-width">
             <ul class="eyebrow-links">
-                <li>Free Shipping Over $50 &amp; Hassle Free Returns <a href="#0">Details</a></li>
-                <li><a href="#0">Green Farm Parts Exclusives</a></li>
-                <li><a href="#0">Chat</a></li>
-                <li><a href="#0">Why Green Farm Parts?</a></li>
+                <?php
+                  wp_nav_menu(
+                    array(
+                      'menu' => 'eyebrow_quick_links',
+                    )
+                  );
+                ?>
             </ul>
         </div>
     </section>
 
     <!-- SITE-HEADER -->
-    <header class="site-header">
-        <div class="site-width">
-            <nav>
+    <div class="site-header-container">
+        <header class="site-header">
+            <div class="site-header-logo-container">
+                <a href="/"><img src="/wp-content/themes/GFP/dist/img/GFP-logo.png" alt="GreenFarmParts"></a>
+            </div>
+            <nav class="site-navigation--header" role="navigation">
+                <?php echo get_product_search_form(); ?>
                 <ul class="site-header-list">
-                    <li class="site-header-logo-container"><a href="/"><img src="/wp-content/themes/GFP/dist/img/GFP-logo.png" alt=""></a></li>
-                    <li><a href="#0">Gifts</a></li>
-                    <li><a href="#0">Deals &amp; Promotions</a></li>
-                    <li><a href="#0">My Account</a></li>
-                    <li><a href="#0">Order Status</a></li>
-                    <li class="shopping-cart-list-item"><a href="#0"><img src="/v/vspfiles/templates/gfp-test/img/cart-icon.jpg" alt=""></a></li>
+                    <li>
+                        <button id="toggleShopByPart">Shop By Part</button>
+                        <?php
+                          wp_nav_menu(
+                            array(
+                              'menu' => 'shop-by-part',
+                            )
+                          );
+                        ?>
+                    </li>
+                    <!-- <li>
+                        <button>Shop By Equipment</button>
+                    </li>
+                    <li>
+                        <a href="#0">Parts Diagram</a>
+                    </li>
+                    <li class="shopping-cart-list-item"><a href="#0"><img src="/v/vspfiles/templates/gfp-test/img/cart-icon.jpg" alt=""></a></li> -->
                 </ul>
             </nav>
+            <div class="menu-toggle-container">
+                <button id="toggleMenu">Menu</button>
+                <!-- <button id="hamburger" class="hamburger hamburger--spin menu-toggle" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+                </button> -->
+            </div>
+        </header>
+        <div class="site-header-searchbar">
+            search
         </div>
-    </header>
+    </div>
 
     <!-- MAIN CONTAINER -->
-    <main>
+    <main <?php post_class(); ?>>
